@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Loans Creation">
+<listeners>
+  <listener class-name="TestNgPackage.listenersCls"></listener>
+</listeners>
+<parameter name="GlobalURL" value="suitelevelglobalURL.com"/>
+<parameter name="GlobalURL2" value="suitelevelsecondglobalURL.com"/>
+
+  <test name="CarandPersonalLoans">
+  
+    <classes>
+      <class name="TestNgPackage.TestNgDay1">
+          <methods>
+              <include name="testcase2"></include>
+          </methods>      
+      </class>
+      <class name="TestNgPackage.CarLoans">
+          <methods>
+              <exclude name=".*API.*"></exclude>
+          </methods>   
+      
+      </class>
+      
+      <class name="TestNgPackage.HomeLoans"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="TravelLoans">
+  <parameter name="GlobalURL" value="TEstlevelglobalURL.com"/>
+	  <classes>
+		  <class name="TestNgPackage.TravelLoans">
+			  <methods>
+			      <exclude name="testcase1Travel"></exclude>
+			  </methods>
+		  
+		  </class>
+	  </classes>
+  
+  </test>
+  
+</suite> <!-- Suite -->

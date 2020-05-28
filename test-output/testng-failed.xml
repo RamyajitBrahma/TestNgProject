@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Loans Creation]">
+  <parameter name="GlobalURL2" value="suitelevelsecondglobalURL.com"/>
+  <parameter name="GlobalURL" value="suitelevelglobalURL.com"/>
+  <listeners>
+    <listener class-name="TestNgPackage.listenersCls"/>
+  </listeners>
+  <test thread-count="5" name="CarandPersonalLoans(failed)">
+    <classes>
+      <class name="TestNgPackage.CarLoans">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="prerequisite"/>
+          <include name="testcase1Car"/>
+          <include name="beforemethfunc"/>
+        </methods>
+      </class> <!-- TestNgPackage.CarLoans -->
+    </classes>
+  </test> <!-- CarandPersonalLoans(failed) -->
+</suite> <!-- Failed suite [Loans Creation] -->
